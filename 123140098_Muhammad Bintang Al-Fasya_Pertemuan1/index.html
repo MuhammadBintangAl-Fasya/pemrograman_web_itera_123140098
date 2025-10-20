@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Manajemen Tugas Mahasiswa</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <h1>Manajemen Tugas</h1>
+                <p> Kelola Tugas Anda dengan Web Gacor Saya</p>
+            </div>
+        </header>
+
+        <!-- Stats Section -->
+        <section class="stats-section">
+            <div class="stat-card">
+                <div class="stat-number" id="totalCount">0</div>
+                <div class="stat-label">Total Tugas</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="incompleteCount">0</div>
+                <div class="stat-label">Belum Selesai</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="completedCount">0</div>
+                <div class="stat-label">Selesai</div>
+            </div>
+        </section>
+
+        <!-- Add Task Form -->
+        <section class="form-section">
+            <h2>Tambah Tugas Baru</h2>
+            <form id="taskForm" class="task-form">
+                <div class="form-group">
+                    <label for="taskName">Nama Tugas *</label>
+                    <input 
+                        type="text" 
+                        id="taskName" 
+                        placeholder="Contoh: Tugas Buat Video"
+                        required
+                    >
+                    <span class="error-message" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskCourse">Mata Kuliah *</label>
+                    <input 
+                        type="text" 
+                        id="taskCourse" 
+                        placeholder="Contoh: Ethical Hacking"
+                        required
+                    >
+                    <span class="error-message" id="courseError"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="taskDeadline">Deadline *</label>
+                    <input 
+                        type="date" 
+                        id="taskDeadline"
+                        required
+                    >
+                    <span class="error-message" id="deadlineError"></span>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Tambah Tugas</button>
+            </form>
+        </section>
+
+        <!-- Search and Filter Section -->
+        <section class="search-filter-section">
+            <div class="search-box">
+                <input 
+                    type="text" 
+                    id="searchInput" 
+                    placeholder="Cari tugas atau mata kuliah..."
+                    class="search-input"
+                >
+            </div>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">Semua</button>
+                <button class="filter-btn" data-filter="active">Belum Selesai</button>
+                <button class="filter-btn" data-filter="completed">Selesai</button>
+            </div>
+        </section>
+
+        <!-- Task List -->
+        <section class="task-list-section">
+            <div id="taskList" class="task-list">
+                <!-- Tasks will be rendered here -->
+            </div>
+
+            <!-- Empty State -->
+            <div id="emptyState" class="empty-state" style="display: none;">
+                <p id="emptyMessage">Belum ada tugas. Tambah tugas lah bro, biar hidup menantang!</p>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+<footer class="footer">
+        <p>&copy; 2025 Muhammad Bintang Al Fasya dan My Asisten. All rights reserved.</p>
+    </footer>
+
+</html>
