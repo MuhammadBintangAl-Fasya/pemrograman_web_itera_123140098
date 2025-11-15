@@ -27,7 +27,6 @@ def tentukan_grade(nilai):
 
 
 def tampilkan_tabel(data):
-    """Menampilkan data mahasiswa dalam format tabel rapi"""
     print("-" * 70)
     print(f"{'Nama':15} {'NIM':10} {'UTS':5} {'UAS':5} {'Tugas':7} {'Akhir':7} {'Grade'}")
     print("-" * 70)
@@ -43,7 +42,6 @@ def tampilkan_tabel(data):
 
 
 def tambah_mahasiswa():
-    """Input data mahasiswa baru"""
     print("\nINPUT DATA MAHASISWA BARU")
     nama = input("Nama        : ")
     nim = input("NIM         : ")
@@ -86,11 +84,6 @@ def hitung_rata_rata():
     """Menghitung nilai rata-rata kelas"""
     total = sum(hitung_nilai_akhir(m) for m in mahasiswa_list)
     return total / len(mahasiswa_list)
-
-
-# ---------------------------------------------------
-# PROGRAM UTAMA (MENU)
-# ---------------------------------------------------
 
 def menu():
     while True:
