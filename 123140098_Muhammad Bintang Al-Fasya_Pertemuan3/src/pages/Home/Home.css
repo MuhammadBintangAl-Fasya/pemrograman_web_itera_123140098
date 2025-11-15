@@ -1,0 +1,33 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #f5f7fa;
+}
+
+.main-content {
+  flex: 1;
+  padding: 0;
+  margin-top: 0;
+}
+
+.app-footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 2rem 1rem;
+  margin-top: 3rem;
+  border-top: 1px solid #444;
+}
+
+.app-footer p {
+  margin: 0;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+  .home {
+    min-height: auto;
+  }
+}
