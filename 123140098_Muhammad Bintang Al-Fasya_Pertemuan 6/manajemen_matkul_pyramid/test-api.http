@@ -1,0 +1,54 @@
+### Get all matakuliah
+GET http://localhost:6543/api/matakuliah
+
+### Get detail matakuliah with id 1
+GET http://localhost:6543/api/matakuliah/1
+
+### Get detail matakuliah with id 2
+GET http://localhost:6543/api/matakuliah/2
+
+### Add new matakuliah - Pemrograman Web
+POST http://localhost:6543/api/matakuliah
+Content-Type: application/json
+
+{
+  "kode_mk": "IF301",
+  "nama_mk": "Pemrograman Web",
+  "sks": 3,
+  "semester": 5
+}
+
+### Add new matakuliah - Sistem Operasi
+POST http://localhost:6543/api/matakuliah
+Content-Type: application/json
+
+{
+  "kode_mk": "IF202",
+  "nama_mk": "Sistem Operasi",
+  "sks": 3,
+  "semester": 3
+}
+
+### Update matakuliah - change nama and sks
+PUT http://localhost:6543/api/matakuliah/1
+Content-Type: application/json
+
+{
+  "nama_mk": "Algoritma dan Pemrograman Lanjut",
+  "sks": 4
+}
+
+### Delete matakuliah with id 4
+DELETE http://localhost:6543/api/matakuliah/4
+
+### Test error - missing required field
+POST http://localhost:6543/api/matakuliah
+Content-Type: application/json
+
+{
+  "kode_mk": "IF999",
+  "nama_mk": "Test Course"
+}
+
+### Test error - get non-existent matakuliah
+GET http://localhost:6543/api/matakuliah/999

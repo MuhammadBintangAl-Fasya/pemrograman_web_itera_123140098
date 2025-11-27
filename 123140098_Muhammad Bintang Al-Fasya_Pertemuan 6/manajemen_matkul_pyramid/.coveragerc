@@ -1,0 +1,3 @@
+[run]
+source = manajemen_matkul_pyramid
+omit = manajemen_matkul_pyramid/test*
